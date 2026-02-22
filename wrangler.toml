@@ -1,0 +1,22 @@
+name = "rank-my-store"
+main = "dist/worker.js"
+compatibility_date = "2026-02-22"
+type = "javascript"
+
+# Environment variables
+[vars]
+SHOPIFY_API_KEY = "61cb11c2079b616acf12ec28edf41623"
+SHOPIFY_API_SECRET = "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"
+SHOPIFY_SCOPES = "read_products,write_products,read_product_listings,write_product_listings"
+SHOPIFY_APP_URL = "https://rank-my-store.pages.dev"
+DATABASE_URL = "postgresql://neondb_owner:npg_iZchQg6Ox1Lt@ep-misty-darkness-aiupkp4w-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+
+# Optional KV namespace (for sessions)
+[[kv_namespaces]]
+binding = "SESSIONS_KV"
+id = "a86ab14941524b85b4601c7b1a208a5c"
+
+# Build config
+[build]
+command = "npm run build"
+directory = "dist"
